@@ -317,6 +317,17 @@ SOUTH_TESTS_MIGRATE = False
 
 VERIFIER_EXPIRE_DAYS = 3
 
+LIVESETTINGS_OPTIONS = {
+    1: {
+        'DB': True,
+        'SETTINGS': {
+            'GENERAL_SKIN_SETTINGS': {
+                'ASKBOT_DEFAULT_SKIN': 'foxconn',
+            }
+        }
+    }
+}
+
 try:
     from local_settings import *
 except ImportError:
