@@ -1,5 +1,12 @@
 {% extends "one_column_body.html" %}
 {% block content %}
+    {% if prev_url != "" %}
+        <a href="{{ prev_url }}">Prev</a>
+    {% endif %}
+    {% if next_url != "" %}
+        <a href="{{ next_url }}">Next</a>
+    {% endif %}
+
     {% for post in posts %}
         <h2>{{ post.title }}</h2>
             {{ post.date }}
