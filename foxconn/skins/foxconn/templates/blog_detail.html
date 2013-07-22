@@ -1,0 +1,9 @@
+{% extends "one_column_body.html" %}
+{% block content %}
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+            {{ post.date }}
+            {{ post.body|safe }}
+        <hr>
+    {% endfor %}
+{% endblock content %}
