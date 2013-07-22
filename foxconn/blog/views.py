@@ -10,6 +10,7 @@ from askbot.conf import settings as askbot_settings
 from settings import TUMBLR_CONSUMER_KEY
 
 
+@cache_page(60*15)
 def index(request):
     limit = request.GET.get('limit', '5')
     offset = request.GET.get('offset', '0')
