@@ -328,6 +328,8 @@ LIVESETTINGS_OPTIONS = {
     }
 }
 
+TUMBLR_CONSUMER_KEY = ''
+
 try:
     from local_settings import *
 except ImportError:
