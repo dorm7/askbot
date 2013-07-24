@@ -8,14 +8,15 @@ from django.views.decorators.cache import cache_page
 
 from askbot.conf import settings as askbot_settings
 from settings import TUMBLR_CONSUMER_KEY
-
+from settings import TUMBLR_SITE
 
 @cache_page(60*15)
 def index(request):
     limit = request.GET.get('limit', '5')
     offset = request.GET.get('offset', '0')
     key = TUMBLR_CONSUMER_KEY
-    tumblr_api = 'http://api.tumblr.com/v2/blog/blog.krdai.info/posts/text?api_key={key}&limit={limit}&offset={offset}'.format(**locals())
+    tumber_site = TUMBLR_SITE
+    tumblr_api = 'http://api.tumblr.com/v2/blog/{tumber_site}/posts/text?api_key={key}&limit={limit}&offset={offset}'.format(**locals())
     r = requests.get(tumblr_api)
     response = r.json()['response']
 

@@ -1,9 +1,17 @@
 {% import "macros.html" as macros%}
+
+<a
+  id="navBlog"
+  href="{% url blog_list %}"
+  {% if active_tab == 'blog_list' %}class="on"{% endif %}
+>{% trans %}blog_list{% endtrans %}</a>
+
 <a 
   id="navTags"
   href="{% url tags %}"
   {% if active_tab == 'tags' %}class="on"{% endif %}
 >{% trans %}tags{% endtrans %}</a>
+
 {% if settings.GROUPS_ENABLED %}
 <span class="dropdown">
 <a

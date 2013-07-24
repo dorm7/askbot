@@ -329,7 +329,7 @@ LIVESETTINGS_OPTIONS = {
 }
 
 TUMBLR_CONSUMER_KEY = ''
-
+TUMBLR_SITE = 'timyellow.tumblr.com'
 try:
     from local_settings import *
 except ImportError:

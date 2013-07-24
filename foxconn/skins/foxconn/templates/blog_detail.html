@@ -1,4 +1,15 @@
 {% extends "one_column_body.html" %}
+
+{% block forestyle %}
+    <style>
+        p{
+            overflow: hidden;
+        }
+        a{
+            text-overflow: ellipsis;
+        }
+    </style>
+{% endblock %}
 {% block content %}
     {% if prev_url != "" %}
         <a href="{{ prev_url }}">Prev</a>
