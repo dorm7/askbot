@@ -2,6 +2,8 @@
 
 pip install -r requirements.txt
 
+PS: please follow the steps correctly
+
     cd foxconn
     python manage.py syncdb
     python manage.py migrate askbot
@@ -12,6 +14,8 @@ pip install -r requirements.txt
 # Settings
 
 In order to use the tumblr api, you need to set TUMBLR_CONSUMER_KEY in settings.py. To know more about TUMBLR API, you can view [Tumblr API](http://www.tumblr.com/docs/en/api/v2) to get information.
+
+After You get your key, you can specify TUMBLR_SITE, It is the tumblr site's domain name, such as blog.krdai.info. 
 
 # MODIFICATION
 
